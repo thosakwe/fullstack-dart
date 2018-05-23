@@ -1,10 +1,19 @@
 import 'package:angular/angular.dart';
-import 'package:angular_components/material_button/material_button.dart';
+import 'package:angular_router/angular_router.dart';
+
+import 'src/routes.dart';
 
 @Component(
   selector: 'app',
   templateUrl: 'app_component.html',
   styleUrls: const ['app_component.scss.css'],
-  directives: const [MaterialButtonComponent],
+  directives: const [routerDirectives],
+  providers: [
+    const ClassProvider(Routes),
+  ],
 )
-class AppComponent {}
+class AppComponent {
+  final Routes routes;
+
+  AppComponent(this.routes);
+}
