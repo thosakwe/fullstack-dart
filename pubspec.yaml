@@ -8,6 +8,7 @@ dependencies:
   angular_forms: ^2.0.0-alpha+4
   angular_router: ^2.0.0-alpha+11
   shelf: ^0.7.3+1
+  shelf_static: ^0.2.7+1
 
 dev_dependencies:
   build_runner: ^0.8.9

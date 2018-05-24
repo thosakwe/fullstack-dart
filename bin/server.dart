@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart';
-
-Response _handler(Request request) {
-  return new Response.ok('it works');
-}
+import 'package:shelf_static/shelf_static.dart';
 
 void main() {
   runZoned(() {
+    final staticHandler =
+        createStaticHandler('build/web', defaultDocument: 'index.html');
+
     final handler =
-        const Pipeline().addMiddleware(logRequests()).addHandler(_handler);
+        const Pipeline().addMiddleware(logRequests()).addHandler(staticHandler);
 
     serve(handler, '0.0.0.0', 8080);
   }, onError: (error, stack) {

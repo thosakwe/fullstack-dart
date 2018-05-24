@@ -2,7 +2,8 @@ import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
 // ignore: uri_has_not_been_generated
-import 'package:angulardart_boot/angulardart_boot_client.template.dart' as app;
+import 'package:angulardart_boot/src/components/app/app_component.template.dart'
+    as app;
 
 // ignore: uri_has_not_been_generated
 import 'main.template.dart' as ng;
