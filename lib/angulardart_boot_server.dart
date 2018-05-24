@@ -1,0 +1,1 @@
+library angulardart_boot;

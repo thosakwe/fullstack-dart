@@ -4,11 +4,11 @@ import 'package:angular_router/angular_router.dart';
 import 'route_paths.dart' as paths;
 
 // ignore: uri_has_not_been_generated
-import 'foo/foo_component.template.dart' as fooCompTpl;
+import 'components/foo/foo_component.template.dart' as fooCompTpl;
 // ignore: uri_has_not_been_generated
-import 'bar/bar_component.template.dart' as barCompTpl;
+import 'components/bar/bar_component.template.dart' as barCompTpl;
 // ignore: uri_has_not_been_generated
-import 'baz/baz_component.template.dart' as bazCompTpl;
+import 'components/baz/baz_component.template.dart' as bazCompTpl;
 
 @Injectable()
 class Routes {

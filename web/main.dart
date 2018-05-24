@@ -2,7 +2,7 @@ import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
 // ignore: uri_has_not_been_generated
-import 'package:angulardart_boot/app_component.template.dart' as appCompTpl;
+import 'package:angulardart_boot/angulardart_boot_client.template.dart' as app;
 
 // ignore: uri_has_not_been_generated
 import 'main.template.dart' as ng;
@@ -12,5 +12,4 @@ import 'main.template.dart' as ng;
 )
 final InjectorFactory injector = ng.injector$Injector;
 
-void main() =>
-    runApp(appCompTpl.AppComponentNgFactory, createInjector: injector);
+void main() => runApp(app.AppComponentNgFactory, createInjector: injector);
