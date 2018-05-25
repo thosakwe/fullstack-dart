@@ -11,7 +11,9 @@ void main() {
     final handler =
         const Pipeline().addMiddleware(logRequests()).addHandler(staticHandler);
 
-    serve(handler, '0.0.0.0', 8080);
+    serve(handler, '0.0.0.0', 8080).then((server) {
+      print('Listening on http://localhost:8080');
+    });
   }, onError: (error, stack) {
     print('Ops! $error');
   });
