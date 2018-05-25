@@ -1,0 +1,4 @@
+@import 'package:angular_components/material_button/mixins';
+
+@include button-background-color('material-button', #000);
+@include button-color('material-button', #fff);

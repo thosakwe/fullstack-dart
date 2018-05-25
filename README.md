@@ -1,3 +1,13 @@
-# :boot: AngularDart Boot
+# Full-stack Dart
 
-Full-stack bootstrap repository for applications with [AngularDart](https://webdev.dartlang.org/angular) + [AngularDart Components](https://webdev.dartlang.org/components) on the client and [Shelf](https://github.com/dart-lang/shelf) on the server.
+Reference repository for full-stack [Dart](https://www.dartlang.org/) applications.
+
+## Client
+- [AngularDart](https://webdev.dartlang.org/angular) + Routing
+- [AngularDart Components](https://webdev.dartlang.org/components)
+
+## Server
+ - [Shelf](https://github.com/dart-lang/shelf)
+
+## Goals
+- [Stagehand](https://github.com/dart-lang/stagehand) template (?)

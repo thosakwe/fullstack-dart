@@ -1,16 +1,12 @@
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
-// ignore: uri_has_not_been_generated
-import 'package:angulardart_boot/src/components/app/app_component.template.dart'
-    as app;
-
-// ignore: uri_has_not_been_generated
-import 'main.template.dart' as ng;
+import 'package:fullstack_dart/app_component.template.dart' as ng;
+import 'main.template.dart' as self;
 
 @GenerateInjector(
   routerProvidersHash, // You can use routerProviders in production
 )
-final InjectorFactory injector = ng.injector$Injector;
+final InjectorFactory injector = self.injector$Injector;
 
-void main() => runApp(app.AppComponentNgFactory, createInjector: injector);
+void main() => runApp(ng.AppComponentNgFactory, createInjector: injector);

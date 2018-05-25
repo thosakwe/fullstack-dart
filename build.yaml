@@ -3,6 +3,7 @@ targets:
     builders:
       angular_components|scss_builder:
         enabled: True
+
       build_web_compilers|entrypoint:
         generate_for:
            - web/main.dart
@@ -12,3 +13,7 @@ targets:
             - --minify
             - --trust-type-annotations
             - --trust-primitives
+
+      built_value_generator|built_value:
+        options:
+          header: // This is generated code; please do not modify by hand.
