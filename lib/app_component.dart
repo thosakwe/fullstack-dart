@@ -25,8 +25,4 @@ class AppComponent {
   final Routes routes;
 
   AppComponent(this.store, this.routes);
-
-  void changeMessage() {
-    store.mutate(new State((b) => b.message = 'It works'));
-  }
 }

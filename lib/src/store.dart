@@ -4,7 +4,10 @@ import 'package:built_value/built_value.dart';
 part 'store.g.dart';
 
 abstract class State implements Built<State, StateBuilder> {
+  @nullable
   String get message;
+  @nullable
+  String get token;
 
   State._();
   factory State([updates(StateBuilder b)]) = _$State;

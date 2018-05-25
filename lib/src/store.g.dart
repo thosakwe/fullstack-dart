@@ -17,13 +17,13 @@ part of 'store.dart';
 class _$State extends State {
   @override
   final String message;
+  @override
+  final String token;
 
   factory _$State([void updates(StateBuilder b)]) =>
       (new StateBuilder()..update(updates)).build();
 
-  _$State._({this.message}) : super._() {
-    if (message == null) throw new BuiltValueNullFieldError('State', 'message');
-  }
+  _$State._({this.message, this.token}) : super._();
 
   @override
   State rebuild(void updates(StateBuilder b)) =>
@@ -36,17 +36,19 @@ class _$State extends State {
   bool operator ==(dynamic other) {
     if (identical(other, this)) return true;
     if (other is! State) return false;
-    return message == other.message;
+    return message == other.message && token == other.token;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, message.hashCode));
+    return $jf($jc($jc(0, message.hashCode), token.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('State')..add('message', message))
+    return (newBuiltValueToStringHelper('State')
+          ..add('message', message)
+          ..add('token', token))
         .toString();
   }
 }
@@ -58,11 +60,16 @@ class StateBuilder implements Builder<State, StateBuilder> {
   String get message => _$this._message;
   set message(String message) => _$this._message = message;
 
+  String _token;
+  String get token => _$this._token;
+  set token(String token) => _$this._token = token;
+
   StateBuilder();
 
   StateBuilder get _$this {
     if (_$v != null) {
       _message = _$v.message;
+      _token = _$v.token;
       _$v = null;
     }
     return this;
@@ -81,7 +88,7 @@ class StateBuilder implements Builder<State, StateBuilder> {
 
   @override
   _$State build() {
-    final _$result = _$v ?? new _$State._(message: message);
+    final _$result = _$v ?? new _$State._(message: message, token: token);
     replace(_$result);
     return _$result;
   }

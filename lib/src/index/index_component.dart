@@ -6,21 +6,20 @@ import '../store.dart';
 import '../route_paths.dart' as paths;
 
 @Component(
-  selector: 'foo',
-  templateUrl: 'foo_component.html',
+  selector: 'index',
+  templateUrl: 'index_component.html',
   directives: const [MaterialButtonComponent],
 )
-class FooComponent {
+class IndexComponent implements OnActivate {
   final Store store;
   final Router router;
 
-  FooComponent(this.store, this.router);
+  IndexComponent(this.store, this.router);
 
-  changeMessage() {
-    store.mutate(new State((b) => b.message = 'Message at foo'));
-  }
-
-  goToBar() {
-    router.navigate(paths.bar.path);
+  @override
+  void onActivate(_, RouterState current) {
+    if (store.state.token == null) {
+      router.navigate(paths.login.path);
+    }
   }
 }

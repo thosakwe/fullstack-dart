@@ -2,26 +2,20 @@ import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 
 import 'route_paths.dart' as paths;
-
-import 'foo/foo_component.template.dart' as foo;
-import 'bar/bar_component.template.dart' as bar;
-import 'baz/baz_component.template.dart' as baz;
+import 'index/index_component.template.dart' as index;
+import 'login/login_component.template.dart' as login;
 
 @Injectable()
 class Routes {
   final _routes = {
-    'foo': new RouteDefinition(
+    'index': new RouteDefinition(
       useAsDefault: true,
-      routePath: paths.foo,
-      component: foo.FooComponentNgFactory,
+      routePath: paths.index,
+      component: index.IndexComponentNgFactory,
     ),
-    'bar': new RouteDefinition(
-      routePath: paths.bar,
-      component: bar.BarComponentNgFactory,
-    ),
-    'baz': new RouteDefinition(
-      routePath: paths.baz,
-      component: baz.BazComponentNgFactory,
+    'login': new RouteDefinition(
+      routePath: paths.login,
+      component: login.LoginComponentNgFactory,
     ),
   };
 
